@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+		rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+		crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Epsychiatry Video Rooms</title>
+  <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png"/>
+  <style></style>
+</head>
+<body>
+  <nav class="navbar navbar-light col-12">
+    <a class="navbar-brand" href="#">
+    <img src="images/logo.png" id="logo" width="100" height="100" style="margin-left: 10px;" alt="Epsychiatry logo">
+    </a>
+  </nav>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-6 border-top border-bottom" >
+            <h3 class=" pt-2" style="font-size: 3.2vw;" >EPSYCHIATRY VIDEO ROOMS</h3>
+          </div>        
+        <div class="col-6 border-top border-bottom" >
+          <button class = "leaveButton btn btn-dark btn-sm mt-md-2 mt-lg-3 mt-sm-1
+          offset-2 offset-lg-9 offset-md-8 offset-sm-7" id = 'leave'> Leave Room</button>
+          </div>
+        </div>
+    
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <button class = "callButton btn btn-success btn-sm ml-3 mt-1 offset-10 offset-md-11"  id = 'call'><svg xmlns="http://www.w3.org/2000/svg" 
+          width="16" height="16" fill="currentColor" class="bi bi-telephone-plus" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z"/>
+        </svg></button>
+        <button class = "hangupButton btn btn-danger btn-sm ml-3 mt-1 mb-3" id = 'hangup' style="display:none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+          class="bi bi-telephone-minus" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" 
+          d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+        </svg></button>
+        <button class = "answerButton btn btn-success btn-sm ml-3 mt-1 mb-3" style="display:none;" 
+          id = 'answer'><svg 
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+            class="bi bi-telephone-inbound" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0zm-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg></button>
+      </div> 
+    </div>
+  </div>
+ 
+  
+  <div id="roomData" class="container-fluid">
+    <div class="row" >
+      <div class="col-3 mt-1 offset-1 border-top border-bottom">
+        <h6 class="roomName"><i> Room </i></h6>
+        <h6 id="room-name" class=""></h6>
+        
+      </div>
+      <div class="col-3 mt-1 offset-lg-5 offset-4 border-top border-bottom">
+        <h6 class="usersName" style="margin-left: 20px;"><i> Users</i></h6>
+        <div id="users" style="list-style-type:none; margin-left: 20px;" ></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-1">
+    <div class="row">
+        <div class="col-12 col-lg-3" >
+          <div id="mainArea" class="card">
+            <div class = "card-body">
+              <div class="chat-messages  overflow-auto" 
+                style="overflow-x:visible; width:auto; height:250px">
+              </div>  
+              <div class="form-group">
+                <form id="chat-form" class="form-group">
+                  <input
+                    id="msg"
+                    type="text"
+                    class= "form-control"
+                    placeholder="Enter Message"
+                    required
+                    autocomplete="off"
+                  />
+                  <button id = "send" class="btn btn-dark mt-3"> Send</button>
+                </form>
+              </div>
+                
+             </div>
+          </div>
+          
+        </div>
+          <video id = "remoteVideo" class="col-9 col-lg-7 mb-1" style="display:none;" autoplay playsinline></video>          
+          <video id = "localVideo" class="localVideo col-3 col-lg-2 align-self-start  mb-1" style="display:none;background-color: blue;" autoplay muted playsinline></video>
+        </div>
+  </div>
+  <div class="container-fluid">
+    <div class="col-9 col-lg-7 offset-lg-3">
+      <button class="fullScreen btn btn-dark btn-sm mt-1" 
+          id="fullScreen" style="float:right; margin-right: 10px; display:none">Fullscreen</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.js" 
+    integrity="sha512-53y53BQwxZvk4YGd9SkHPqI7nDwlIIFZ4D2BSJG08Co7y6O3YsWeRtO6trPtdoyqfTCTkTbCulNosIAI6E4UvQ==" 
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

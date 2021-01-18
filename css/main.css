@@ -1,0 +1,55 @@
+.leaveButton,
+.callButton,
+.hangupButton,
+.answerButton {
+  float: right;
+  margin-right: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #145c2f;
+    box-shadow: 0 0 5px #198754;
+  }
+  50% {
+    background-color: #1a6d46;
+    box-shadow: 0 0 20px #22ac6c;
+  }
+  100% {
+    background-color: #145c2f;
+    box-shadow: 0 0 5px#198754;
+  }
+}
+#answer {
+  animation: glowing 1300ms infinite;
+}
+
+@media screen and (min-width: 768px) {
+  h6.roomName.usersName {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  p.roomName {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h6.usersName {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .collapse {
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 576px) {
+  div.chat-messages {
+    width: 350px;
+  }
+} */

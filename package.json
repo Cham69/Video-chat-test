@@ -1,0 +1,26 @@
+{
+  "name": "modify-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "node-static": "^0.7.10",
+    "socket.io": "^2.0.4"
+  },
+  "engines": {
+    "node": "10.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
