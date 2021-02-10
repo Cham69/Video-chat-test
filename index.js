@@ -1,3 +1,4 @@
+/* 
 'use strict';
 
 var os = require('os');
@@ -128,3 +129,4 @@ socket.on("selfHangup", ()=>{
 });
 
 
+ */
